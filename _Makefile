@@ -1,0 +1,7 @@
+order:main.c graph.c time_manager.c time_manager.h graph.h  
+	gcc -o cn-order main.c graph.c time_manager.c -g -O0 -lm -lpthread -fopenmp 
+
+run_order:order
+	./cn-order data/karate.txt 
+clean:
+	rm order 
